@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div id="container">
+            <h1 id="header">TODO App</h1>
+            <form action="/create-todo" method="POST">
+                <hr>
+                <div id="description">
+                    <label for="desc" class="text-size-for-headers">DESCRIPTION</label>
+                    <input type="text" id="desc" name="description" placeholder="what do you need to do?" class="text-size">
+                </div>
+                <hr>
+                <div id="cat-and-date">
+                    <div>
+                        <p class="text-size-for-headers" id="cats">CATEGORY</p>
+                    <label for="categories" class="text-size">Choose a category</label>
+                    <select name="categories" id="categories" class="text-size">
+                        <option value="Market" class="text-size">Market</option>
+                        <option value="Study" class="text-size">Study</option>
+                        <option value="Sport" class="text-size">Sport</option>
+                        <option value="School" class="text-size">School</option>
+                        <option value="Work" class="text-size">Work</option>
+                    </select>
+                    </div>
+                    <div>
+                        <label for="date" class="text-size-for-headers">DUE DATE</label><br>
+                    <i class="fa fa-calendar" class="text-size-for-headers"></i>
+                    <input type="date" name="date" id="date" class="text-size-for-headers">
+                    </div>
+                </div>
+                <hr>
+                
+                    <div id="button-section">
+                        <button type="submit" class="buttons" id="add-button"> <i class="fa fa-plus"></i> ADD TASK</button>
+                        <!-- <div id="delete-button" onclick="deleteTask()"> <i class="fa fa-trash-o" id="delete-icon"></i> DELETE TASK</div> -->
+                    </div>
+                
+
+                <div>
+                    <!-- tasks list -->
+                    <% for (let i of todosList) { %>
+                    <hr>
+                    <div class="todos">
+                        <div class="tasks">
+                            <p class="tasks-text"><%= i.description %></p>
+                            <div>
+                                <p class="dates"><i class="fa fa-calendar"></i> <%= i.dueDate %></p>
+                            <div class="<%= i.category %> cate-button" > <p class="cate-text"><%= i.category %></p></div>
+                            </div>
+                        </div>
+                        <div class="delete-tasks">
+                            <a href="/delete-todo/?id=<%=i.id%>"><i class="fa fa-trash-o delete-tasks-button"></i></a>
+                        </div>
+                        
+                    </div>
+                    <%} %>
+                </div>
+                
+            </form>
+        </div>
+        <script src="https://kit.fontawesome.com/9381d3aeec.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/js/index.js"></script>
+    </body>
+</html>

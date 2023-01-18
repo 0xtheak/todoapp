@@ -1,0 +1,148 @@
+body {
+    background-color: grey;
+}
+
+/* outer box style */
+
+#container {
+    width: 450px;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 32vw;
+    top: 10vh;
+    box-shadow: 5px 5px 10px 1px whitesmoke;
+}
+
+hr {
+    opacity: 0.7;
+}
+
+input, select {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.text-size-for-headers {
+    font-size: 10px; 
+}
+
+#cats {
+    margin: 0;
+}
+
+.text-size {
+    font-size: 12px;
+}
+
+#description {
+    
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+#cat-and-date {
+    padding-left: 5px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+#header {
+    text-align: center;
+    font-weight: 400;
+}
+
+
+#button-section{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+
+
+.dates {
+    margin: 0;
+    padding: auto;
+    font-size: 0.7rem;
+    color: gray;
+}
+
+
+
+/* buttons formatting */
+.buttons {
+    height: 2.4rem;
+    width: 6.5rem;
+    border: none;
+    outline: none;
+}
+
+#add-button {
+    background-color: #444444;
+    font-size: 12px;
+    color: white;
+}
+
+#delete-icon {
+    padding-right: 4px;
+}
+
+.delete-tasks-button {
+    color: #ee351e;
+}
+
+/* category buttons */
+.cate-button {
+    height: 2rem;
+    width: 5rem;
+    
+}
+.Market {
+    background-color: yellow;
+}
+
+.Sport {
+    background-color: blue;
+}
+
+.School {
+    background-color: aqua;
+}
+
+.Work {
+    background-color: orange;
+}
+.Study {
+    background-color: green;
+}
+
+.cate-text {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+/* tasks list */
+
+.todos {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+
+.delete-tasks {
+    margin-right: 10px;
+}
+
+.tasks-text {
+    font-size: 12px;
+    margin: 0;
+    padding-left: 5px;
+}
